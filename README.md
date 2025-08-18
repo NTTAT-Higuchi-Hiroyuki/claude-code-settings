@@ -10,20 +10,20 @@ Claude Codeの設定とカスタマイズのベストプラクティスを集め
 
 ```
 claude-code-settings/
-├── CLAUDE.md          # ~/.claude/ 配置用のグローバルユーザーガイドライン
-├── settings.json      # Claude Code設定ファイル
-├── commands/          # カスタムコマンド定義
-│   ├── code-review.md    # 詳細分析を含むコードレビューの実行
-│   ├── d-search.md       # gemini-cliを使用した深いコードベース解析
-│   ├── design.md         # 技術設計フェーズの実行
+├── CLAUDE.md            # ~/.claude/ 配置用のグローバルユーザーガイドライン
+├── settings.json        # Claude Code設定ファイル
+├── commands/            # カスタムコマンド定義
+│   ├── code-review.md   # 詳細分析を含むコードレビューの実行
+│   ├── d-search.md      # gemini-cliを使用した深いコードベース解析
+│   ├── design.md        # 技術設計フェーズの実行
 │   ├── marp.md          # Marpプレゼンテーション作成コマンド
-│   ├── requirements.md   # 要件定義フェーズの実行
+│   ├── requirements.md  # 要件定義フェーズの実行
 │   ├── search.md        # gemini-cliを使用したGoogle Web検索
 │   ├── spec.md          # 完全な仕様駆動開発ワークフロー
 │   ├── tasks.md         # タスク分解フェーズの実行
 │   └── textlint.md      # textlintによるファイル校正・修正
-└── symlinks/         # 外部ツール設定ファイルのシンボリックリンク
-    ├── settings.json      # MCP設定を含むClaude Code設定
+└── symlinks/            # 外部ツール設定ファイルのシンボリックリンク
+    ├── settings.json    # MCP設定を含むClaude Code設定
     └── config/
         └── ccmanager/
             └── config.json    # ccmanager: Claude Codeプロジェクト＆gitワークツリー管理
@@ -33,17 +33,7 @@ claude-code-settings/
 
 `symlinks/`フォルダには、Claude Codeに関連する様々な外部ツールの設定ファイルが含まれています。Claude Codeは頻繁に更新され、設定変更が多いため、すべての設定ファイルを一つのフォルダに集約することで編集が格段に楽になります。関連ファイルが通常`~/.claude/`ディレクトリ外に配置される場合でも、統一管理のためにシンボリックリンクとしてここに配置するのが便利です。
 
-実際の環境では、これらのファイルは指定された場所にシンボリックリンクとして配置されます。
-
-```bash
-# Claude Code設定をリンク
-ln -s /path/to/settings.json ~/.claude/settings.json
-
-# ccmanager設定をリンク
-ln -s /path/to/.config/ccmanager/config.json ~/.claude/symlinks/ccmanager/config.json
-```
-
-これにより設定変更をリポジトリで管理し、複数の環境で共有できます。
+実際の環境では、これらのファイルは指定された場所にシンボリックリンクとして配置します。
 
 ## 主要な機能
 
@@ -140,14 +130,23 @@ Claude Codeの動作を制御する設定ファイル：
 ### 1. リポジトリのクローン
 
 ```bash
-git clone https://github.com/nokonoko1203/claude-code-settings.git
+git clone https://github.com/NTTAT-Higuchi-Hiroyuki/claude-code-settings.git
 cd claude-code-settings
 ```
 
-### 2. Claude Codeへの設定適用
+### 2. 設定済みのClaude Code設定のバックアップ
 
-リポジトリの内容を`~/.claude/`にコピーするか、リポジトリと同期させるためにシンボリックリンクを作成できます。
+```bash
+# 既存の設定をバックアップ
+mkdir -p ~/.claude/backup/commands
+cp ~/.claude/*.md ~/.claude/backup/
+cp ~/.claude/settings.json ~/.claude/backup/
+cp ~/.claude/commands/* ~/.claude/backup/
+```
 
+### 3. Claude Codeへの設定適用
+
+リポジトリの内容を`~/.claude/`と同期させるためにシンボリックリンクを作成します。
 
 #### 方法: リポジトリを~/.claude/にリンク（推奨）
 
