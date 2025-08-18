@@ -1,75 +1,75 @@
 # Guidelines
 
-This document defines the project's rules, objectives, and progress management methods. Please proceed with the project according to the following content.
+この文書はプロジェクトのルール、目標、進捗管理方法を定義します。以下の内容に従ってプロジェクトを進めてください。
 
 ## Top-Level Rules
 
-- To maximize efficiency, **if you need to execute multiple independent processes, invoke those tools concurrently, not sequentially**.
+- 効率を最大化するため、**複数の独立したプロセスを実行する必要がある場合は、順次ではなく同時にツールを呼び出してください**。
 - **You must think exclusively in English**. However, you are required to **respond in Japanese**.
-- To understand how to use a library, **always use the Contex7 MCP** to retrieve the latest information.
-- For temporary notes for design, create a markdown in `.tmp` and save it.
-- **After using Write or Edit tools, ALWAYS verify the actual file contents using the Read tool**, regardless of what the system-reminder says. The system-reminder may incorrectly show "(no content)" even when the file has been successfully written.
-- Please respond critically and without pandering to my opinions, but please don't be forceful in your criticism.
+- ライブラリの使用方法を理解するために、**常に Contex7 MCPを使用**して最新情報を取得してください。
+- 設計用の一時的なメモには、`.tmp`にマークダウンを作成して保存してください。
+- **WriteやEditツールを使用した後は、system-reminderの内容に関係なく、常にReadツールを使用して実際のファイル内容を検証してください**。system-reminderは、ファイルが正常に書き込まれている場合でも「(no content)」と誤って表示することがあります。
+- 私の意見におもねることなく批判的に回答してください。ただし、批判は強制的にならないようにしてください。
 
 ## Programming Rules
 
-- Avoid hard-coding values unless absolutely necessary.
-- Do not use `any` or `unknown` types in TypeScript.
-- You must not use a TypeScript `class` unless it is absolutely necessary (e.g., extending the `Error` class for custom error handling that requires `instanceof` checks).
+- 必要でない限り、ハードコーディングは避けてください。
+- TypeScriptで`any`や`unknown`型を使用しないでください。
+- 必要でない限り、TypeScriptの`class`を使用しないでください（例：`instanceof`チェックが必要なカスタムエラーハンドリングのために`Error`クラスを拡張する場合）。
 
 ## Development Style - Specification-Driven Development
 
 ### Overview
 
-When receiving development tasks, please follow the 5-stage workflow below. This ensures requirement clarification, structured design, comprehensive testing, and efficient implementation.
+開発タスクを受け取った際は、以下の 5-Stage Workflow に従ってください。これにより、要件の明確化、構造化された設計、包括的なテスト、効率的な実装が保証されます。
 
 ### 5-Stage Workflow
 
 #### Stage 1: Requirements
 
-- Analyze user requests and convert them into clear functional requirements
-- Document requirements in `.tmp/requirements.md`
-- Use `/requirements` command for detailed template
+- ユーザーリクエストを分析し、明確な機能要件に変換する
+- 要件を`.tmp/requirements.md`に文書化
+- 詳細なテンプレートには`/requirements`コマンドを使用
 
 #### Stage 2: Design
 
-- Create technical design based on requirements
-- Document design in `.tmp/design.md`
-- Use `/design` command for detailed template
+- 要件に基づいて技術設計を作成
+- 設計を`.tmp/design.md`に文書化
+- 詳細なテンプレートには`/design`コマンドを使用
 
 #### Stage 3: Test Design
 
-- Create comprehensive test specification based on design
-- Document test cases in `.tmp/test_design.md`
-- Use `/test-design` command for detailed template
+- 設計に基づいて包括的なテスト仕様を作成
+- テストケースを`.tmp/test_design.md`に文書化
+- 詳細なテンプレートには`/test-design`コマンドを使用
 
 #### Stage 4: Task List
 
-- Break down design and test cases into implementable units
-- Document in `.tmp/tasks.md`
-- Use `/tasks` command for detailed template
-- Manage major tasks with TodoWrite tool
+- 設計とテストケースを実装可能な単位に分解
+- `.tmp/tasks.md`に文書化
+- 詳細なテンプレートには`/tasks`コマンドを使用
+- 主要なタスクはTodoWriteツールで管理
 
 #### Stage 5: Implementation
 
-- Implement according to task list
-- For each task:
-  - Update task to in_progress using TodoWrite
-  - Execute implementation and testing
-  - Run lint and typecheck
-  - Update task to completed using TodoWrite
+- タスクリストに従って実装
+- 各タスクについて：
+  - TodoWriteを使用してタスクをin_progressに更新
+  - 実装とテストを実行
+  - lintとtypecheckを実行
+  - TodoWriteを使用してタスクをcompletedに更新
 
 ### Workflow Commands
 
-- `/spec` - Start the complete specification-driven development workflow
-- `/requirements` - Execute Stage 1: Requirements only
-- `/design` - Execute Stage 2: Design only (requires requirements)
-- `/test-design` - Execute Stage 3: Test design only (requires design)
-- `/tasks` - Execute Stage 4: Task breakdown only (requires design and test design)
+- `/spec` - 完全な仕様駆動開発ワークフローを開始
+- `/requirements` - ステージ1: 要件のみを実行
+- `/design` - ステージ2: 設計のみを実行（要件が必要）
+- `/test-design` - ステージ3: テスト設計のみを実行（設計が必要）
+- `/tasks` - ステージ4: タスク分解のみを実行（設計とテスト設計が必要）
 
 ### Important Notes
 
-- Each stage depends on the deliverables of the previous stage
-- Please obtain user confirmation before proceeding to the next stage
-- Always use this workflow for complex tasks or new feature development
-- Simple fixes or clear bug fixes can be implemented directly
+- 各ステージは前のステージの成果物に依存します
+- 次のステージに進む前にユーザーの確認を得てください
+- 複雑なタスクや新機能開発には常にこのワークフローを使用してください
+- 単純な修正や明確なバグ修正は直接実装可能です
