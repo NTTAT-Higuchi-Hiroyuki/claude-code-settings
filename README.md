@@ -144,36 +144,30 @@ git clone https://github.com/nokonoko1203/claude-code-settings.git
 cd claude-code-settings
 ```
 
-### 2. Claude Codeへの設定適用
+### 2. Claude Codeへの設定バックアップ(初回のみ)
 
-リポジトリの内容を`~/.claude/`にコピーするか、リポジトリと同期させるためにシンボリックリンクを作成できます。
-
-
-#### 方法: リポジトリを~/.claude/にリンク（推奨）
+すでに運用済みのユーザClaude設定のバックアップを取ります。
 
 ```bash
-# リポジトリと同期させるためのシンボリックリンクを作成
-ln -s /path/to/claude-code-settings ~/.claude/claude-code-settings
+mkdir -p ~/.claude/claude-code-settings/backup
+mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
+mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
+mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
+```
+
+### 3. Claude Codeへの設定適用方法(初回のみ)
+
+リポジトリの内容を`~/.claude/`配下のユーザ設定と同期させるためにシンボリックリンクを作成します。
+
+```bash
+# リポジトリと同期させるためのシンボリックリンクを作成 
+ln -s "$(pwd)" ~/.claude/claude-code-settings
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ```
 
-### 3. シンボリックリンクを使用した外部ツールの設定
-
-集中管理のために外部ツールの場所から`~/.claude/symlinks/`へのシンボリックリンクを作成します：
-
-```bash
-# symlinksディレクトリ構造を作成
-mkdir -p ~/.claude/symlinks/config/ccmanager/
-
-# Claude Codeグローバル設定をsymlinksフォルダにリンク
-ln -s ~/claude.json ~/.claude/symlinks/claude.json
-
-# ccmanager設定をsymlinksフォルダにリンク
-ln -s ~/.config/ccmanager/config.json ~/.claude/symlinks/config/ccmanager/config.json
-```
 
 このアプローチでは、Claude Code関連のすべての設定ファイルを`~/.claude/`ディレクトリに集中化して管理しやすくします。
 
