@@ -144,30 +144,36 @@ git clone https://github.com/nokonoko1203/claude-code-settings.git
 cd claude-code-settings
 ```
 
-### 2. Claude Codeへの設定バックアップ(初回のみ)
 
-すでに運用済みのユーザClaude設定のバックアップを取ります。
-
-```bash
-mkdir -p ~/.claude/claude-code-settings/backup
-mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
-mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
-mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
-```
-
-### 3. Claude Codeへの設定適用方法(初回のみ)
+### 2. Claude Codeへの設定適用方法(初回のみ)
 
 リポジトリの内容を`~/.claude/`配下のユーザ設定と同期させるためにシンボリックリンクを作成します。
 
 ```bash
 # リポジトリと同期させるためのシンボリックリンクを作成 
 ln -s "$(pwd)" ~/.claude/claude-code-settings
+# すでに運用済みのユーザClaude設定のバックアップを取ります。
+mkdir -p ~/.claude/claude-code-settings/backup
+mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
+mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
+mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
+
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ```
 
+### 3. プロジェクト固有のMCP設定
+
+`.mcp.json`をプロジェクトトップディレクトリにコピーして利用してください。
+不要なmcpがあれば、`.mcp.json`から削除してください。
+最低限必要なのは、Context7, Github, Serenaです。
+また、以下の変数部分は書き換えが必要です。
+
+・ ${GITHUB_PERSONAL_ACCESS_TOKEN}：GitHubのPersonal Access Tokenを設定してください。
+・ ${DATABASE_URI}：プロジェクト内でPostgresql互換のデータベースを使っている場合のURIを設定してください。
+・ ${PROJECT_PATH}：プロジェクトのフルパスを設定してください。
 
 このアプローチでは、Claude Code関連のすべての設定ファイルを`~/.claude/`ディレクトリに集中化して管理しやすくします。
 

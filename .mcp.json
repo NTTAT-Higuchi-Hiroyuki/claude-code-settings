@@ -95,7 +95,7 @@
         "--context",
         "ide-assistant",
         "--project",
-        "/Users/higu/Project/claude-code-settings"
+        "${PROJECT_PATH}"
       ],
       "env": {}
     }
