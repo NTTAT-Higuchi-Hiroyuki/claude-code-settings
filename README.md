@@ -151,28 +151,30 @@ cp ~/.claude/commands/* ~/.claude/backup/
 #### 方法: リポジトリを~/.claude/にリンク（推奨）
 
 ```bash
-# リポジトリと同期させるためのシンボリックリンクを作成
-ln -s /path/to/claude-code-settings ~/.claude/claude-code-settings
+# リポジトリと同期させるためのシンボリックリンクを作成 
+ln -s "$(pwd)" ~/.claude/claude-code-settings
+# すでに運用済みのユーザClaude設定のバックアップを取ります。
+mkdir -p ~/.claude/claude-code-settings/backup
+mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
+mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
+mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
+
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ```
 
-### 3. シンボリックリンクを使用した外部ツールの設定
+### 3. プロジェクト固有のMCP設定
 
-集中管理のために外部ツールの場所から`~/.claude/symlinks/`へのシンボリックリンクを作成します：
+`.mcp.json`をプロジェクトトップディレクトリにコピーして利用してください。
+不要なmcpがあれば、`.mcp.json`から削除してください。
+最低限必要なのは、Context7, Github, Serenaです。
+また、以下の変数部分は書き換えが必要です。
 
-```bash
-# symlinksディレクトリ構造を作成
-mkdir -p ~/.claude/symlinks/config/ccmanager/
-
-# Claude Codeグローバル設定をsymlinksフォルダにリンク
-ln -s ~/claude.json ~/.claude/symlinks/claude.json
-
-# ccmanager設定をsymlinksフォルダにリンク
-ln -s ~/.config/ccmanager/config.json ~/.claude/symlinks/config/ccmanager/config.json
-```
+・ ${GITHUB_PERSONAL_ACCESS_TOKEN}：GitHubのPersonal Access Tokenを設定してください。
+・ ${DATABASE_URI}：プロジェクト内でPostgresql互換のデータベースを使っている場合のURIを設定してください。
+・ ${PROJECT_PATH}：プロジェクトのフルパスを設定してください。
 
 このアプローチでは、Claude Code関連のすべての設定ファイルを`~/.claude/`ディレクトリに集中化して管理しやすくします。
 
