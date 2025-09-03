@@ -11,9 +11,10 @@ Orchestrate a comprehensive planning session by integrating task breakdown, requ
 ## Context
 
 - Task focus: $ARGUMENTS
-- 要件書: @.tmp/requirements.md
+- 要件定義書: @.tmp/requirements.md
 - 設計書: @.tmp/design.md
-- タスクリスト: @.tmp/tasks.md 
+- テスト設計書: @.tmp/test-design.md
+- タスクリスト: @.tmp/tasks.md
 - Git status: Attempt to get git status (continue if fails)
 
 ## Task
@@ -23,11 +24,11 @@ Create a focused planning session for the first non-completed task, integrating 
 
 1. Check for existence of tasks.md, requirements.md, and design.md
 2. If missing critical files, prompt user to run appropriate commands first:
-   - Missing requirements.md → suggest `/requirements [feature description]`
-   - Missing design.md → suggest `/design`
-   - Missing tasks.md → suggest `/tasks`
+   - Missing requirements.md → suggest `/spec;requirements_jp [feature description]`
+   - Missing design.md → suggest `/spec:design_jp`
+   - Missing tasks.md → suggest `/spec:tasks_jp`
+   - Missing test-design.md → suggest `/spec:test-design_jp`
 3. Read and analyze all available specification documents
-
 
 ### Phase 2: Gitステータスとタスクの状況の確認
 

@@ -1,33 +1,33 @@
 ---
 allowed-tools: TodoWrite, TodoRead, Read, Write, MultiEdit, mcp__serena__find_file, mcp__serena__find_symbol, mcp__serena__list_memories, mcp__serena__search_for_pattern
-description: Create comprehensive test specification based on design document (Stage 3 of Spec-Driven Development)
+description: 設計書に基づいて包括的なテスト仕様を作成します（仕様駆動開発のステージ3）
 ---
 
-## Context
+## コンテキスト
 
-- Design document: @.tmp/design.md
+- 設計書: @.tmp/design.md
 
-## Your task
+## あなたのタスク
 
-### 1. Verify prerequisites
+### 1. 前提条件の確認
 
-- Check that `.tmp/design.md` exists
-- If not, inform user to run `/design` first
+- `.tmp/design.md`が存在することを確認
+- 存在しない場合は、最初に`/spec:design_jp`を実行するようユーザーに通知
 
-### 2. Analyze design document
+### 2. 設計書の分析
 
-**IMPORTANT: When investigating existing files or code, you MUST use serena. Using serena reduces token consumption by 60-80% and efficiently retrieves necessary information through semantic search capabilities.**
+**重要: 既存のファイルやコードを調査する際は、必ずserenaを使用してください。serenaを使用することで、トークン消費量が60-80%削減され、セマンティック検索機能を通じて必要な情報を効率的に取得できます。**
 
-Read and understand the design document thoroughly, focusing on:
+以下に焦点を当てて設計書を徹底的に読み理解してください：
 
-- API endpoints and interfaces
-- Component behaviors
-- Data flows
-- Error handling requirements
+- APIエンドポイントとインターフェース
+- コンポーネントの動作
+- データフロー
+- エラーハンドリング要件
 
-### 3. Create Test Design Document
+### 3. テスト設計書の作成
 
-Create `.tmp/test_design.md` with the following sections:
+以下のセクションで`.tmp/test_design.md`を作成してください：
 
 ````markdown
 # テスト設計書 - [タスク名]
@@ -164,24 +164,24 @@ Create `.tmp/test_design.md` with the following sections:
 - [継続的テストの実行方法]
 ````
 
-### 4. Update TODO
+### 4. TODOの更新
 
-Use TodoWrite to add "テスト設計の完了とレビュー" as a task
+TodoWriteを使用して「テスト設計の完了とレビュー」をタスクとして追加
 
-### 5. Present to user
+### 5. ユーザーへの提示
 
-Show the created test design document and ask for:
+作成したテスト設計書を表示し、以下を求めてください：
 
-- Test coverage feedback
-- Test case approval
-- Permission to proceed to task breakdown
+- テストカバレッジのフィードバック
+- テストケースの承認
+- タスク分解への進行許可
 
-## Important Notes
+## 重要な注意事項
 
-- Cover all critical paths from the design document
-- Include edge cases and error scenarios
-- Consider performance and security aspects
-- Make test cases specific and measurable
-- Ensure test data is realistic and comprehensive
+- 設計書からすべてのクリティカルパスをカバーしてください
+- エッジケースとエラーシナリオを含めてください
+- パフォーマンスとセキュリティの側面を考慮してください
+- テストケースを具体的で測定可能にしてください
+- テストデータが現実的で包括的であることを確保してください
 
 think hard
