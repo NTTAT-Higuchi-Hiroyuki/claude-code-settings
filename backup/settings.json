@@ -1,0 +1,88 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(cp:*)",
+            "Bash(ls:*)",
+            "Bash(env:*)",
+            "Bash(echo:*)",
+            "Bash(jq:*)",
+            "Bash(pip:*)",
+            "Bash(docker cp:*)",
+            "Bash(docker compose:*)",
+            "Bash(lsof:*)",
+            "Bash(mkdir:*)",
+            "Bash(find:*)",
+            "Bash(pytest:*)",
+            "Bash(python:*)",
+            "Bash(curl:*)",
+            "Bash(git checkout:*)",
+            "Bash(git add:*)",
+            "Bash(git commit:*)",
+            "Bash(git push:*)",
+            "Bash(git pull:*)",
+            "Bash(git tag:*)",
+            "Bash(git fetch:*)",
+            "Bash(gh pr:*)",
+            "Bash(gh pr diff:*)",
+            "Bash(gh pr view:*)",
+            "Bash(gh issue list:*)",
+            "mcp__postgres__list_objects",
+            "mcp__postgres__execute_sql",
+            "mcp__postgres__list_schemas",
+            "mcp__postgres__get_object_details",
+            "mcp__postgres__analyze_db_health",
+            "mcp__github__create_issue",
+            "mcp__github__search_repositories",
+            "mcp__github__list_issues",
+            "mcp__github__create_pull_request",
+            "mcp__github__get_issue",
+            "mcp__github__search_issues",
+            "mcp__excel__excel_describe_sheets",
+            "mcp__excel__excel_read_sheet",
+            "mcp__excel__excel_write_to_sheet",
+            "mcp__context7__resolve-library-id",
+            "mcp__context7__get-library-docs",
+            "mcp__playwright__browser_navigate",
+            "mcp__playwright__browser_take_screenshot",
+            "mcp__playwright__browser_type",
+            "mcp__playwright__browser_click",
+            "mcp__playwright__browser_install",
+            "mcp__playwright__browser_snapshot"
+        ]
+    },
+    "enableAllProjectMcpServers": true,
+    "enabledMcpjsonServers": [
+        "github",
+        "postgres",
+        "awslabs.cdk-mcp-server",
+        "awslabs.aws-documentation-mcp-server",
+        "playwright",
+        "ppt",
+        "excel",
+        "awslabs.core-mcp-server"
+    ],
+    "hooks": {
+        "Stop": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "echo '{\"title\": \"Claude Code\", \"message\": \"タスクが完了しました\", \"subtitle\": \"処理終了\"}' > /tmp/notifywatcher/notify_trigger.txt"
+                    }
+                ]
+            }
+        ],
+        "Notification": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "echo '{\"title\": \"Claude Code\", \"message\": \"Claude Codeが許可を求めています\", \"subtitle\": \"確認待ち\"}' > /tmp/notifywatcher/notify_trigger.txt"
+                    }
+                ]
+            }
+        ]
+    }
+}
