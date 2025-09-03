@@ -134,17 +134,7 @@ git clone https://github.com/NTTAT-Higuchi-Hiroyuki/claude-code-settings.git
 cd claude-code-settings
 ```
 
-### 2. 設定済みのClaude Code設定のバックアップ
-
-```bash
-# 既存の設定をバックアップ
-mkdir -p ~/.claude/backup/commands
-cp ~/.claude/*.md ~/.claude/backup/
-cp ~/.claude/settings.json ~/.claude/backup/
-cp ~/.claude/commands/* ~/.claude/backup/
-```
-
-### 3. Claude Codeへの設定適用
+### 2. Claude Codeへの設定適用
 
 リポジトリの内容を`~/.claude/`と同期させるためにシンボリックリンクを作成します。
 
