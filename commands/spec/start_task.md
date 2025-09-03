@@ -35,7 +35,7 @@ Create a focused planning session for the first non-completed task, integrating 
 1. `git status`で変更されたファイルをリスト
 2. `git diff --stat`で変更の統計情報を確認
 3. `git diff`で具体的な変更内容を分析
-4. **Focus**: Identify the first non-completed task from tasks.md (タスクが存在しない場合はユーザーに通知する)
+4. **Focus**: Identify the first non-completed task from @.tmp/tasks.md (タスクが存在しない場合はユーザーに通知する)
 
 ### Phase 3: Task-Focused Integration
 
