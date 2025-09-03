@@ -8,6 +8,10 @@
   "permissions": {
     "allow": [
       "Read(**)",
+      "TodoWrite",
+      "TodoRead",
+      "MultiEdit(src/**)",
+      "MultiEdit(docs/**)",
       "Write(src/**)",
       "Write(docs/**)",
       "Write(.tmp/**)",
@@ -79,7 +83,12 @@
       "mcp__playwright__browser_tab_new",
       "mcp__playwright__browser_tab_select",
       "mcp__playwright__browser_tab_close",
-      "mcp__playwright__browser_generate_playwright_test"
+      "mcp__playwright__browser_generate_playwright_test",
+      "mcp__serena__list_dir",
+      "mcp__serena__activate_project",
+      "mcp__serena__find_symbol",
+      "mcp__serena__list_memories",
+      "mcp__serena__search_for_pattern"
     ],
     "deny": [
       "Bash(sudo:*)",
