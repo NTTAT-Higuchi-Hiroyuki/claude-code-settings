@@ -61,11 +61,11 @@
 
 ### Workflow Commands
 
-- `/spec` - 完全な仕様駆動開発ワークフローを開始
-- `/requirements` - ステージ1: 要件のみを実行
-- `/design` - ステージ2: 設計のみを実行（要件が必要）
-- `/test-design` - ステージ3: テスト設計のみを実行（設計が必要）
-- `/tasks` - ステージ4: タスク分解のみを実行（設計とテスト設計が必要）
+- `/spec:spec_workflow_jp` - 完全な仕様駆動開発ワークフローを開始
+- `/spec:requirements_jp` - ステージ1: 要件のみを実行
+- `/spec:design_jp` - ステージ2: 設計のみを実行（要件が必要）
+- `/spec:test-design_jp` - ステージ3: テスト設計のみを実行（設計が必要）
+- `/spec:tasks_jp` - ステージ4: タスク分解のみを実行（設計とテスト設計が必要）
 
 ### Important Notes
 
