@@ -131,7 +131,7 @@ Claude Codeの動作を制御する設定ファイル：
 
 1. npxのインストール
 2. uvxmのインストール
-3. BurntToastのインストール
+3. BurntToastのインストール(Windowsの場合)
 
 ```bash
 Install-Module -Name BurntToast -Force -Scope CurrentUser
