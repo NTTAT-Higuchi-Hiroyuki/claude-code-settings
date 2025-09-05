@@ -127,18 +127,21 @@ Claude Codeの動作を制御する設定ファイル：
 
 ## セットアップ
 
-### 1. リポジトリのクローン
+### 0.　事前準備
+
+1. npxのインストール
+2. uvxmのインストール
+3. BurntToastのインストール
 
 ```bash
-git clone https://github.com/NTTAT-Higuchi-Hiroyuki/claude-code-settings.git
-cd claude-code-settings
+Install-Module -Name BurntToast -Force -Scope CurrentUser
 ```
 
 ### 2. Claude Codeへの設定適用
 
 リポジトリの内容を`~/.claude/`と同期させるためにシンボリックリンクを作成します。
 
-#### 方法: リポジトリを~/.claude/にリンク（推奨）
+#### 方法: リポジトリを~/.claude/にリンク（Windows　WSL環境）
 
 ```bash
 # リポジトリと同期させるためのシンボリックリンクを作成 
@@ -152,6 +155,23 @@ mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
+ln -s ~/.claude/claude-code-settings/commands ~/.claude/
+```
+
+#### 方法: リポジトリを~/.claude/にリンク（MacOS環境）
+
+```bash
+# リポジトリと同期させるためのシンボリックリンクを作成 
+ln -s "$(pwd)" ~/.claude/claude-code-settings
+# すでに運用済みのユーザClaude設定のバックアップを取ります。
+mkdir -p ~/.claude/claude-code-settings/backup
+mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
+mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
+mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
+
+# 個別ファイルをリンク
+ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
+ln -s ~/.claude/claude-code-settings/settings_macos.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ```
 
