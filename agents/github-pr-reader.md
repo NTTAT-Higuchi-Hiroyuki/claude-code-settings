@@ -1,5 +1,5 @@
 ---
-name: review-reader
+name: github-pr-reader
 description: MUST BE USED to read and understand PR review comments for processing
 tools: Bash, mcp__github__get_pull_request_comments
 ---

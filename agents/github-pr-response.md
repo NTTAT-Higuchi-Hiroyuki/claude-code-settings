@@ -1,5 +1,5 @@
 ---
-name: review-responder
+name: github-pr-response
 description: Use PROACTIVELY to respond to PR review comments after fixes are implemented
 tools: Bash, mcp__github__create_pending_pull_request_review, mcp__github__add_pull_request_review_comment_to_pending_review, mcp__github__submit_pending_pull_request_review
 ---

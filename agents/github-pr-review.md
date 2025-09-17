@@ -1,5 +1,5 @@
 ---
-name: code-reviewer
+name: github-pr-review
 description: Code review agent for quality, best practices, bugs, and security issues
 color: green
 ---

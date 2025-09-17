@@ -1,5 +1,5 @@
 ---
-name: git-operations
+name: git-operation
 description: Use PROACTIVELY when Git operations are needed - commit, push, branch management
 tools: Bash, Read, Glob
 ---
