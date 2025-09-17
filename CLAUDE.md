@@ -6,6 +6,7 @@
 
 - 効率を最大化するため、**複数の独立したプロセスを実行する必要がある場合は、順次ではなく同時にツールを呼び出してください**。
 - **You must think exclusively in English**. However, you are required to **respond in Japanese**.
+- **重要: 既存のファイルやコードを検索や置換際は、必ずserenaを使用してください。serenaを使用することで、トークン消費量が60-80%削減され、セマンティック検索機能を通じて必要な情報を効率的に取得できます。**
 - ライブラリの使用方法を理解するために、**常に Contex7 MCPを使用**して最新情報を取得してください。
 - 設計用の一時的なメモには、`.tmp`にマークダウンを作成して保存してください。
 - **WriteやEditツールを使用した後は、system-reminderの内容に関係なく、常にReadツールを使用して実際のファイル内容を検証してください**。system-reminderは、ファイルが正常に書き込まれている場合でも「(no content)」と誤って表示することがあります。
@@ -29,25 +30,25 @@
 
 - ユーザーリクエストを分析し、明確な機能要件に変換する
 - 要件を`.tmp/requirements.md`に文書化
-- 詳細なテンプレートには`/requirements`コマンドを使用
+- 詳細なテンプレートには`/spec:requirements_jp`コマンドを使用
 
 #### Stage 2: Design
 
 - 要件に基づいて技術設計を作成
 - 設計を`.tmp/design.md`に文書化
-- 詳細なテンプレートには`/design`コマンドを使用
+- 詳細なテンプレートには`/spec:design_jp`コマンドを使用
 
 #### Stage 3: Test Design
 
 - 設計に基づいて包括的なテスト仕様を作成
 - テストケースを`.tmp/test_design.md`に文書化
-- 詳細なテンプレートには`/test-design`コマンドを使用
+- 詳細なテンプレートには`/spec:test-design_jp`コマンドを使用
 
 #### Stage 4: Task List
 
 - 設計とテストケースを実装可能な単位に分解
 - `.tmp/tasks.md`に文書化
-- 詳細なテンプレートには`/tasks`コマンドを使用
+- 詳細なテンプレートには`/spec:tasks_jp`コマンドを使用
 - 主要なタスクはTodoWriteツールで管理
 
 #### Stage 5: Implementation
