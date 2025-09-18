@@ -195,7 +195,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "command": "cat | jq -r '@sh \"powershell.exe -Command \\\"New-BurntToastNotification -Text \\(.title|tostring), \\(.message|tostring)\\\"\"' | sh"
+            "command": "cat | jq -r '@sh \"powershell.exe -Command \\\"New-BurntToastNotification -Text \\(.title|tostring), \\(.message|tostring)\\\"\"' | sh"
           }
         ]
       }
