@@ -151,11 +151,13 @@ mkdir -p ~/.claude/claude-code-settings/backup
 mv ~/.claude/CLAUDE*.md ~/.claude/claude-code-settings/backup
 mv  ~/.claude/settings.json ~/.claude/claude-code-settings/backup
 mv  ~/.claude/commands ~/.claude/claude-code-settings/backup
+mv  ~/.claude/agents ~/.claude/claude-code-settings/backup
 
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
+ln -s ~/.claude/claude-code-settings/agents ~/.claude/
 ```
 
 #### 方法: リポジトリを~/.claude/にリンク（MacOS環境）
