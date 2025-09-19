@@ -155,9 +155,14 @@ mv  ~/.claude/agents ~/.claude/claude-code-settings/backup
 
 # 個別ファイルをリンク
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
-ln -s ~/.claude/claude-code-settings/settings.json ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ln -s ~/.claude/claude-code-settings/agents ~/.claude/
+
+# WSL2用設定ファイルをリンク（wsl2の場合）
+ln -s ~/.claude/claude-code-settings/settings_wsl2.json ~/.claude/settings.json
+
+# MacOS用設定ファイルをリンク（MacOSの場合）
+ln -s ~/.claude/claude-code-settings/settings_macos.json ~/.claude/settings.json
 ```
 
 #### 方法: リポジトリを~/.claude/にリンク（MacOS環境）
