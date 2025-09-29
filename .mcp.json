@@ -55,11 +55,13 @@
         "FASTMCP_LOG_LEVEL": "ERROR"
       }
     },
-    "playwright": {
+    "chrome-devtools": {
+      "type": "stdio",
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
-      ]
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
     },
     "ppt": {
       "command": "uvx",
