@@ -87,6 +87,7 @@
       "mcp__serena__activate_project",
       "mcp__serena__find_file",
       "mcp__serena__find_symbol",
+      "mcp__serena__find_referencing_symbols",
       "mcp__serena__insert_after_symbol",
       "mcp__serena__list_dir",
       "mcp__serena__list_memories",
