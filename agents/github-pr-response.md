@@ -42,9 +42,16 @@ nullチェックを追加し、エラーが発生しないように修正しま�
 ```
 
 ## GitHub API使用手順
-1. `mcp__github__create_pending_pull_request_review` でレビュー開始
-2. `mcp__github__add_pull_request_review_comment_to_pending_review` で各コメントに返信
-3. `mcp__github__submit_pending_pull_request_review` でレビューを送信（event: "COMMENT"）
+1. `mcp__github__get_pull_request_comments`で未解決コメントを取得
+2. `mcp__github__create_pending_pull_request_review` でレビュー開始
+3. ghで各コメントに返信を追加
+   - 例:
+```
+gh api repos/:owner/:repo/pulls/:pr_number/comments \
+  -f body='インライン返信コメント' \
+  -f in_reply_to=COMMENT_ID
+```
+4. `mcp__github__submit_pending_pull_request_review` でレビューを送信（event: "COMMENT"）
 
 ## 注意事項
 - 技術的な内容に集中
