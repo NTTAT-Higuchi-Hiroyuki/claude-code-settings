@@ -1,0 +1,58 @@
+{
+  "name": "box",
+  "version": "1.0.0",
+  "description_ja": "Box URLからファイルを取得・更新します",
+  "description_en": "Fetch and update files from Box URLs",
+  "command": "box",
+  "script": "dist/box.js",
+  "runtime": "node",
+  "parameters": {
+    "url": {
+      "type": "string",
+      "required": true,
+      "description": "Box file URL or file ID (e.g., https://app.box.com/file/123456789)"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["read", "update", "info"],
+      "default": "read",
+      "description": "Action to perform: read (default), update, or info"
+    },
+    "content": {
+      "type": "string",
+      "required": false,
+      "description": "Content for update action"
+    }
+  },
+  "environment": {
+    "BOX_ACCESS_TOKEN": {
+      "required": true,
+      "description": "Box API access token (Developer Token or OAuth)"
+    },
+    "BOX_TIMEOUT": {
+      "required": false,
+      "default": "30",
+      "description": "API timeout in seconds"
+    }
+  },
+  "examples": [
+    {
+      "description_ja": "ファイルを読み取る",
+      "description_en": "Read a file",
+      "command": "box https://app.box.com/file/123456789"
+    },
+    {
+      "description_ja": "ファイル情報を表示",
+      "description_en": "Show file info",
+      "command": "box https://app.box.com/file/123456789 info"
+    },
+    {
+      "description_ja": "ファイルを更新",
+      "description_en": "Update a file",
+      "command": "box https://app.box.com/file/123456789 update \"New content\""
+    }
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}
