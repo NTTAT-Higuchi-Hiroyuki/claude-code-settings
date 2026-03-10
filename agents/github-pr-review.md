@@ -20,7 +20,7 @@ color: green
 - 潜在的なバグとセキュリティ問題
 - パフォーマンスへの影響
 - ベストプラクティスの遵守
-- YAGNI（You Ain't Gonna Need It）の原則の確認
+- YAGNI（You Aren't Gonna Need It）の原則の確認
 - KISS（Keep It Simple, Stupid）の原則の確認
 
 コメント1行目にはコメントタイプとして下記のいずれかを用いてください：
