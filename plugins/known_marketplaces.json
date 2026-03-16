@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/higu/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-16T04:02:16.573Z"
+    "lastUpdated": "2026-03-16T21:20:24.722Z"
   },
   "anthropic-agent-skills": {
     "source": {
@@ -13,6 +13,14 @@
       "url": "https://github.com/anthropics/skills.git"
     },
     "installLocation": "/Users/higu/.claude/plugins/marketplaces/anthropic-agent-skills",
-    "lastUpdated": "2026-03-16T06:17:55.461Z"
+    "lastUpdated": "2026-03-16T21:03:24.371Z"
+  },
+  "everything-claude-code": {
+    "source": {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    },
+    "installLocation": "/Users/higu/.claude/plugins/marketplaces/everything-claude-code",
+    "lastUpdated": "2026-03-16T21:21:49.049Z"
   }
 }

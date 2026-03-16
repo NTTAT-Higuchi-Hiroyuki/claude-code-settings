@@ -3,13 +3,20 @@
   "plugins": {
     "code-review@claude-plugins-official": [
       {
-        "scope": "local",
-        "projectPath": "/Users/higu/Project/ONSEI-MINING-frontend",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/code-review/b36fd4b75301",
-        "version": "b36fd4b75301",
+        "scope": "user",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/code-review/d5c15b861cd2",
+        "version": "d5c15b861cd2",
         "installedAt": "2026-03-11T07:57:05.643Z",
-        "lastUpdated": "2026-03-12T00:28:43.078Z",
+        "lastUpdated": "2026-03-16T21:20:24.749Z",
         "gitCommitSha": "bd041495bd2a1f3e21317f37277b2f5aa152b759"
+      },
+      {
+        "scope": "user",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/code-review/d5c15b861cd2",
+        "version": "d5c15b861cd2",
+        "installedAt": "2026-03-16T21:19:10.796Z",
+        "lastUpdated": "2026-03-16T21:19:10.796Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
     "serena@claude-plugins-official": [
@@ -57,8 +64,8 @@
         "scope": "user",
         "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/context7/d5c15b861cd2",
         "version": "d5c15b861cd2",
-        "installedAt": "2026-03-16T03:59:28.616Z",
-        "lastUpdated": "2026-03-16T03:59:28.616Z",
+        "installedAt": "2026-03-16T21:16:43.802Z",
+        "lastUpdated": "2026-03-16T21:16:43.802Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
