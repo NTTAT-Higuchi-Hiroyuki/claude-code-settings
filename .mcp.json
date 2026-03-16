@@ -82,15 +82,6 @@
         "EXCEL_MCP_PAGING_CELLS_LIMIT": "10000"
       }
     },
-    "context7": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ],
-      "env": {}
-    },
     "serena": {
       "type": "stdio",
       "command": "uvx",
