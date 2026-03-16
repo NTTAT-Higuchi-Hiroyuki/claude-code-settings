@@ -3,11 +3,11 @@ paths:
   - "**/*.py"
   - "**/*.pyi"
 ---
-# Python Security
+# Python セキュリティ
 
-> This file extends [common/security.md](../common/security.md) with Python specific content.
+> このファイルは [common/security.md](../common/security.md) を Python 固有の内容で拡張します。
 
-## Secret Management
+## シークレット管理
 
 ```python
 import os
@@ -15,16 +15,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.environ["OPENAI_API_KEY"]  # Raises KeyError if missing
+api_key = os.environ["OPENAI_API_KEY"]  # 不在の場合は KeyError を発生
 ```
 
-## Security Scanning
+## セキュリティスキャン
 
-- Use **bandit** for static security analysis:
+- 静的セキュリティ分析に **bandit** を使用:
   ```bash
   bandit -r src/
   ```
 
-## Reference
+## 参考
 
-See skill: `django-security` for Django-specific security guidelines (if applicable).
+Djangoを使用している場合、Django固有のセキュリティガイドラインはスキル `django-security` を参照。

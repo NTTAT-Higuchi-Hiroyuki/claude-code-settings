@@ -5,22 +5,22 @@ paths:
   - "**/*.js"
   - "**/*.jsx"
 ---
-# TypeScript/JavaScript Coding Style
+# TypeScript/JavaScript コーディングスタイル
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with TypeScript/JavaScript specific content.
+> このファイルは [common/coding-style.md](../common/coding-style.md) を TypeScript/JavaScript 固有の内容で拡張します。
 
-## Immutability
+## イミュータビリティ
 
-Use spread operator for immutable updates:
+スプレッド演算子でイミュータブルな更新を行う:
 
 ```typescript
-// WRONG: Mutation
+// NG: ミューテーション
 function updateUser(user, name) {
   user.name = name  // MUTATION!
   return user
 }
 
-// CORRECT: Immutability
+// OK: イミュータビリティ
 function updateUser(user, name) {
   return {
     ...user,
@@ -29,9 +29,9 @@ function updateUser(user, name) {
 }
 ```
 
-## Error Handling
+## エラー処理
 
-Use async/await with try-catch:
+async/await と try-catch を使用:
 
 ```typescript
 try {
@@ -43,9 +43,9 @@ try {
 }
 ```
 
-## Input Validation
+## 入力バリデーション
 
-Use Zod for schema-based validation:
+スキーマベースのバリデーションに Zod を使用:
 
 ```typescript
 import { z } from 'zod'
@@ -60,6 +60,6 @@ const validated = schema.parse(input)
 
 ## Console.log
 
-- No `console.log` statements in production code
-- Use proper logging libraries instead
-- See hooks for automatic detection
+- プロダクションコードに `console.log` 文を使用しない
+- 代わりに適切なロギングライブラリを使用
+- 自動検出についてはフックを参照

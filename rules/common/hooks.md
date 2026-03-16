@@ -1,30 +1,30 @@
-# Hooks System
+# フックシステム
 
-## Hook Types
+## フック種別
 
-- **PreToolUse**: Before tool execution (validation, parameter modification)
-- **PostToolUse**: After tool execution (auto-format, checks)
-- **Stop**: When session ends (final verification)
+- **PreToolUse**: ツール実行前（バリデーション、パラメータ修正）
+- **PostToolUse**: ツール実行後（自動フォーマット、チェック）
+- **Stop**: セッション終了時（最終確認）
 
-## Auto-Accept Permissions
+## 自動承認パーミッション
 
-Use with caution:
-- Enable for trusted, well-defined plans
-- Disable for exploratory work
-- Never use dangerously-skip-permissions flag
-- Configure `allowedTools` in `~/.claude.json` instead
+慎重に使用:
+- 信頼できる明確に定義されたプランには有効化
+- 探索的な作業には無効化
+- `--dangerously-skip-permissions` フラグは絶対に使用しない
+- 代わりに `~/.claude.json` の `allowedTools` を設定
 
-## TodoWrite Best Practices
+## TodoWrite ベストプラクティス
 
-Use TodoWrite tool to:
-- Track progress on multi-step tasks
-- Verify understanding of instructions
-- Enable real-time steering
-- Show granular implementation steps
+TodoWrite ツールを使用する目的:
+- 複数ステップのタスクの進捗追跡
+- 指示の理解を確認
+- リアルタイムでの方向修正を可能にする
+- 細かな実装ステップを表示
 
-Todo list reveals:
-- Out of order steps
-- Missing items
-- Extra unnecessary items
-- Wrong granularity
-- Misinterpreted requirements
+Todoリストで発見できるもの:
+- 順序が間違っているステップ
+- 不足しているアイテム
+- 不要な余分なアイテム
+- 不適切な粒度
+- 誤って解釈された要件

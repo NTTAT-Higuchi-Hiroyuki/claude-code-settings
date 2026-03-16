@@ -1,37 +1,36 @@
-# Development Workflow
+# 開発ワークフロー
 
-> This file extends [common/git-workflow.md](./git-workflow.md) with the full feature development process that happens before git operations.
+> このファイルは [common/git-workflow.md](./git-workflow.md) を拡張し、git操作前に行う完全な機能開発プロセスを定義します。
 
-The Feature Implementation Workflow describes the development pipeline: research, planning, TDD, code review, and then committing to git.
+機能実装ワークフローは開発パイプラインを記述します: リサーチ、計画、TDD、コードレビュー、そしてgitへのコミット。
 
-## Feature Implementation Workflow
+## 機能実装ワークフロー
 
-0. **Research & Reuse** _(mandatory before any new implementation)_
-   - **GitHub code search first:** Run `gh search repos` and `gh search code` to find existing implementations, templates, and patterns before writing anything new.
-   - **Exa MCP for research:** Use `exa-web-search` MCP during the planning phase for broader research, data ingestion, and discovering prior art.
-   - **Check package registries:** Search npm, PyPI, crates.io, and other registries before writing utility code. Prefer battle-tested libraries over hand-rolled solutions.
-   - **Search for adaptable implementations:** Look for open-source projects that solve 80%+ of the problem and can be forked, ported, or wrapped.
-   - Prefer adopting or porting a proven approach over writing net-new code when it meets the requirement.
+0. **リサーチと再利用** _(新しい実装の前に必須)_
+   - **GitHub コード検索を最初に:** 新しいものを書く前に `gh search repos` と `gh search code` を実行して、既存の実装、テンプレート、パターンを探す。
+   - **パッケージレジストリを確認:** ユーティリティコードを書く前に npm、PyPI、crates.io などのレジストリを検索。手書きのソリューションより実績のあるライブラリを優先。
+   - **応用可能な実装を探す:** 問題の80%以上を解決できるオープンソースプロジェクトを探し、フォーク、ポート、またはラップして使用できるものを見つける。
+   - 要件を満たす実績あるアプローチを採用・移植することを、ゼロから書くことより優先する。
 
-1. **Plan First**
-   - Use **planner** agent to create implementation plan
-   - Generate planning docs before coding: PRD, architecture, system_design, tech_doc, task_list
-   - Identify dependencies and risks
-   - Break down into phases
+1. **まず計画**
+   - **planner** エージェントを使用して実装計画を作成
+   - コーディング前に計画ドキュメントを生成: PRD、アーキテクチャ、system_design、tech_doc、task_list
+   - 依存関係とリスクを特定
+   - フェーズに分解
 
-2. **TDD Approach**
-   - Use **tdd-guide** agent
-   - Write tests first (RED)
-   - Implement to pass tests (GREEN)
-   - Refactor (IMPROVE)
-   - Verify 80%+ coverage
+2. **TDDアプローチ**
+   - **tdd-guide** エージェントを使用
+   - テストを先に書く（RED）
+   - テストを通過させるための実装（GREEN）
+   - リファクタリング（IMPROVE）
+   - 80%以上のカバレッジを確認
 
-3. **Code Review**
-   - Use **code-reviewer** agent immediately after writing code
-   - Address CRITICAL and HIGH issues
-   - Fix MEDIUM issues when possible
+3. **コードレビュー**
+   - コードを書いた直後に **code-reviewer** エージェントを使用
+   - CRITICALとHIGHの問題に対処
+   - 可能な場合はMEDIUMの問題も修正
 
-4. **Commit & Push**
-   - Detailed commit messages
-   - Follow conventional commits format
-   - See [git-workflow.md](./git-workflow.md) for commit message format and PR process
+4. **コミットとプッシュ**
+   - 詳細なコミットメッセージ
+   - コンベンショナルコミット形式に従う
+   - コミットメッセージ形式とPRプロセスについては [git-workflow.md](./git-workflow.md) を参照

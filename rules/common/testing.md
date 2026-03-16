@@ -1,29 +1,29 @@
-# Testing Requirements
+# テスト要件
 
-## Minimum Test Coverage: 80%
+## 最低テストカバレッジ: 80%
 
-Test Types (ALL required):
-1. **Unit Tests** - Individual functions, utilities, components
-2. **Integration Tests** - API endpoints, database operations
-3. **E2E Tests** - Critical user flows (framework chosen per language)
+テスト種別（すべて必須）:
+1. **ユニットテスト** - 個別の関数、ユーティリティ、コンポーネント
+2. **統合テスト** - APIエンドポイント、データベース操作
+3. **E2Eテスト** - 重要なユーザーフロー（言語に応じたフレームワークを選択）
 
-## Test-Driven Development
+## テスト駆動開発
 
-MANDATORY workflow:
-1. Write test first (RED)
-2. Run test - it should FAIL
-3. Write minimal implementation (GREEN)
-4. Run test - it should PASS
-5. Refactor (IMPROVE)
-6. Verify coverage (80%+)
+必須ワークフロー:
+1. テストを先に書く（RED）
+2. テストを実行 - 失敗することを確認
+3. 最小限の実装を書く（GREEN）
+4. テストを実行 - 成功することを確認
+5. リファクタリング（IMPROVE）
+6. カバレッジを確認（80%以上）
 
-## Troubleshooting Test Failures
+## テスト失敗のトラブルシューティング
 
-1. Use **tdd-guide** agent
-2. Check test isolation
-3. Verify mocks are correct
-4. Fix implementation, not tests (unless tests are wrong)
+1. **tdd-guide** エージェントを使用
+2. テストの独立性を確認
+3. モックが正しいか確認
+4. テストではなく実装を修正（テストが間違っている場合を除く）
 
-## Agent Support
+## エージェントサポート
 
-- **tdd-guide** - Use PROACTIVELY for new features, enforces write-tests-first
+- **tdd-guide** - 新機能に対して積極的に使用し、テスト先行を強制する
