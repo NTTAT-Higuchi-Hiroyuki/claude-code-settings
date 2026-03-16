@@ -118,6 +118,16 @@
         "lastUpdated": "2026-03-16T06:18:30.170Z",
         "gitCommitSha": "b0cbd3df1533b396d281a6886d5132f623393a9c"
       }
+    ],
+    "everything-claude-code@everything-claude-code": [
+      {
+        "scope": "user",
+        "installPath": "/Users/higu/.claude/plugins/cache/everything-claude-code/everything-claude-code/1.8.0",
+        "version": "1.8.0",
+        "installedAt": "2026-03-16T21:22:47.023Z",
+        "lastUpdated": "2026-03-16T21:22:47.023Z",
+        "gitCommitSha": "f0b394a151ff1dc76b5549fbad6ab4638fb19407"
+      }
     ]
   }
 }
