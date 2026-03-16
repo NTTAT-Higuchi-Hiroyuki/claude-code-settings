@@ -157,6 +157,8 @@ mv  ~/.claude/agents ~/.claude/claude-code-settings/backup
 ln -s ~/.claude/claude-code-settings/CLAUDE.md ~/.claude/
 ln -s ~/.claude/claude-code-settings/commands ~/.claude/
 ln -s ~/.claude/claude-code-settings/agents ~/.claude/
+ln -s ~/.claude/claude-code-settings/skills ~/.claude/
+ln -s ~/.claude/claude-code-settings/plugins ~/.claude/
 
 # WSL2用設定ファイルをリンク（wsl2の場合）
 ln -s ~/.claude/claude-code-settings/settings_wsl2.json ~/.claude/settings.json
