@@ -4,10 +4,10 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/code-review/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/code-review/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-11T07:57:05.643Z",
-        "lastUpdated": "2026-03-16T21:20:24.749Z",
+        "lastUpdated": "2026-03-17T02:57:42.318Z",
         "gitCommitSha": "bd041495bd2a1f3e21317f37277b2f5aa152b759"
       },
       {
@@ -22,10 +22,10 @@
     "serena@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/serena/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/serena/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-12T01:31:09.505Z",
-        "lastUpdated": "2026-03-15T23:42:18.518Z",
+        "lastUpdated": "2026-03-17T02:57:42.318Z",
         "gitCommitSha": "b36fd4b753018b0b340803579399992a32e43502"
       }
     ],
@@ -52,30 +52,30 @@
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/commit-commands/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/commit-commands/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-16T03:56:01.664Z",
-        "lastUpdated": "2026-03-16T03:56:01.664Z",
+        "lastUpdated": "2026-03-17T02:57:42.320Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
     "context7@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/context7/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/context7/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-16T21:16:43.802Z",
-        "lastUpdated": "2026-03-16T21:16:43.802Z",
+        "lastUpdated": "2026-03-17T02:57:42.317Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
     "learning-output-style@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/learning-output-style/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/learning-output-style/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-16T04:03:55.325Z",
-        "lastUpdated": "2026-03-16T04:03:55.325Z",
+        "lastUpdated": "2026-03-17T02:57:42.320Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
@@ -102,10 +102,10 @@
     "pr-review-toolkit@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/d5c15b861cd2",
-        "version": "d5c15b861cd2",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/78497c524da3",
+        "version": "78497c524da3",
         "installedAt": "2026-03-16T04:05:42.663Z",
-        "lastUpdated": "2026-03-16T04:05:42.663Z",
+        "lastUpdated": "2026-03-17T02:57:42.321Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
@@ -127,6 +127,16 @@
         "installedAt": "2026-03-16T21:22:47.023Z",
         "lastUpdated": "2026-03-16T21:22:47.023Z",
         "gitCommitSha": "f0b394a151ff1dc76b5549fbad6ab4638fb19407"
+      }
+    ],
+    "microsoft-docs@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/higu/.claude/plugins/cache/claude-plugins-official/microsoft-docs/0.3.0",
+        "version": "0.3.0",
+        "installedAt": "2026-03-17T08:33:31.462Z",
+        "lastUpdated": "2026-03-17T08:33:31.462Z",
+        "gitCommitSha": "b00c2c4363c57e41aba79440731e4fc3500e2278"
       }
     ]
   }
